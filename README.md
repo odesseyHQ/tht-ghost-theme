@@ -1,17 +1,8 @@
-# Attila
+# THT Ghost Theme
 
-A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost/). See a demo at: [attila.peteramende.de](https://attila.peteramende.de/)
+This theme is build on top of another opensource theme - [Attila](https://github.com/zutrinken/attila)
 
-## ♥️ Support
-
-You can [buy me a drink](https://paypal.me/zutrinken) if you enjoy using Attila. Cheers 🍻
-
-## 📷 Screenshot
-
-<img src="https://raw.githubusercontent.com/zutrinken/attila/master/src/screenshot.png" />
-
-## ⭐️ Features
-
+## Highlights
 * Theme options
 * Responsive layout
 * Light and Dark Mode
@@ -21,6 +12,43 @@ You can [buy me a drink](https://paypal.me/zutrinken) if you enjoy using Attila.
 * Comments and Disqus (Theme option)
 * Ghost accent color
 
+
+## ⚙️ Development
+
+Install [Grunt](https://gruntjs.com/getting-started/):
+````bash
+npm install -g grunt-cli
+````
+Install Grunt dependencies:
+````bash
+npm install
+````
+During npm install, if there is any error, please remove package-lock.json file and do `npm install` again.
+
+Build Grunt project:
+````bash
+grunt build
+````
+The compress Grunt task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
+````bash
+grunt compress
+````
+
+## Seeing the changes made on the theme
+- In order to see the changes you make on a design, use a [local dev instance of ghost](https://ghost.org/docs/install/) (use ghost v5). 
+- Create a syslink of the theme folder inside the content/themes directory of the ghost source code. (Make sure to give full path during the syslink creation process.)
+- Now restart the ghost server with
+```bash
+ghost restart
+```
+- Check the live server in the browser
+
+## How to add custom icons
+Use font awesome for custom icons
+Paste this code inside the content/themes/<theme-name>/default.hbs
+```html
+<script src="https://kit.fontawesome.com/8ca7911199.js" crossorigin="anonymous"></script>
+```
 ## 🌍 Localization
 
 🟩 Up to date  🟧 Missing strings
@@ -73,24 +101,6 @@ You can [buy me a drink](https://paypal.me/zutrinken) if you enjoy using Attila.
 </style>
 ````
 
-## ⚙️ Development
-
-Install [Grunt](https://gruntjs.com/getting-started/):
-````bash
-npm install -g grunt-cli
-````
-Install Grunt dependencies:
-````bash
-npm install
-````
-Build Grunt project:
-````bash
-grunt build
-````
-The compress Grunt task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
-````bash
-grunt compress
-````
 ## ⚖️ Copyright & License
 
 Copyright (C) 2015-2022 Peter Amende - Released under the [MIT License](https://github.com/zutrinken/attila/blob/master/LICENSE).
